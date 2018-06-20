@@ -1,0 +1,13 @@
+@import './variables/kfpi';
+
+.kf {
+  background-color:#f9f9f9;
+}
+
+@import '../../blocks/header/header';
+@import '../../blocks/footer/footer';
+
+@import '../../blocks/numbers/numbers';
+@import '../../blocks/flat/flat';
+@import '../../blocks/home/home';
+@import '../../blocks/abroad/abroad';

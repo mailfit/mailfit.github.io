@@ -1,0 +1,81 @@
+mixin abroad()
+    tr
+        td.abroad
+            table(cellpadding='0', cellspacing='0', border='0', width='100%', style="border-collapse:collapse; width: 100%; max-width: 600px;")
+                //- Заголовок шапки
+                tr
+                    td(style="padding-bottom: 19px;")
+                        table(cellpadding='0', cellspacing='0', border='0', width='100%', style="border-collapse:collapse; width: 100%; max-width: 600px;")
+                            tr
+                                td.abroad__title= abroad[0].title
+                                td.abroad__iicon
+                                    img(src="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/e2aad6df-2e47-4ac5-908b-f4ba5960a9f4.png" width="60" alt="")
+                //- Текст в заголовке блока
+                tr
+                    td
+                        table(cellpadding='0', cellspacing='0', border='0', width='100%', style="border-collapse:collapse; width: 100%; max-width: 600px;")
+                            tr
+                                td.abroad__title-line.purple(height='8' width='100%')
+
+                            tr
+                                td.abroad__text= abroad[0].text
+                - var iebtn = `<!--[if (gte mso 9)|(IE)]><table width=`+abroad[0].btn_width+`, align="left" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top" width=`+abroad[0].btn_width+`, style="width:`+abroad[0].btn_width+`px;"><![endif]-->`;
+
+                //- Кнопка верхнего блока
+                tr
+                    td(style='border-bottom: 1px solid #e9e9e9; padding-bottom: 48px; vertical-align: top;')
+                        != iebtn
+                        table.abroad.table-btn-2(align='left', cellpadding='0', cellspacing='0', style='border-collapse:separate;max-width:' + abroad[0].btn_width + 'px;min-width:70px;width:100%;', width='100%')
+                            tbody
+                                tr
+                                    td(height='28')
+                                        a.btn(href=abroad[0].link, target='_blank')
+                                            span= abroad[0].btn
+
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+
+                //- Блока с картинкой и балунами
+                tr
+                    td.abroad__name= abroad[0].name
+
+                tr
+                    td.two-columns.item(dir="rtl")
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table cellpadding='0' cellspacing='0' border='0' width='100%' dir='ltr' width='552' align='center'>
+                        <tr>
+                        <td valign='top' width='255' style='width="255"'>
+                        <![endif]-->
+                            .column.right
+                                table(dir='ltr', width='100%', border='0', cellspacing='0', cellpadding='0', style='border-collapse:collapse;')
+                                    tr
+                                        td(style="padding-top:25px;text-align:left;")
+                                            a(href=abroad[0].link, target='_blank')
+                                                img(src=abroad[0].img, alt=abroad[0].name, width='255')
+
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        <td valign="top" width="288" style="width:288px;">
+                        <![endif]-->
+                            .column.left
+                                table(dir="ltr" width="100%", border='0', cellspacing='0', cellpadding="0", style="border-collapse:collapse;")
+                                    tr
+                                        td.bullets
+                                            table
+                                                tr
+                                                    td.icon.city
+                                                        img(width="20" src="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/e793822e-21d1-4a42-9504-1327a13e6409.png" style="border: 0px; width: 15px;  margin: 0px;")
+                                                    td.icon__text.city
+                                                        span= abroad[0].address
+
+                                                each baloon in abroad
+                                                    tr
+                                                        td.icon
+                                                            img(width="15" src=baloon.icon_baloon)
+                                                        td.icon__text= baloon.icon_text
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td></tr></table>
+                        <![endif]-->
