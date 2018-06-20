@@ -1,0 +1,15 @@
+mixin error(template)
+    tr
+        td(style='width: 100%; border: 2px dashed #bf3939;')
+            table(cellpadding='0', cellspacing='0', border='0', width='100%')
+                tr
+                    td(style="background: #e25252;padding: 10px;color: #ffffff;font-family: Arial, sans-serif;")
+                        b Внимание!
+                        | &nbsp;
+                        span Что-то полшло не так. Блок&nbsp;
+                        b= template
+                tr
+                    td(style="background: #fff; padding: 10px; margin-bottom:10px;  text-align: left; font-family: Arial, sans-serif; font-size: 12px;")
+                        b Шаблон&nbsp;"
+                        span= mail.template
+                        | " не настроен или еще не создан

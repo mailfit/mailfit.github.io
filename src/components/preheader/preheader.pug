@@ -1,0 +1,6 @@
+mixin preheader(preheader)
+    - var mail = project.settings[0];
+        if mail.preheader
+            div(style='-webkit-font-smoothing:subpixel-antialiased;margin:0;color:#fff;display:none !important;font-family:arial;font-size:11px;line-height:0;')= mail.preheader
+        else
+            div(style='-webkit-font-smoothing:subpixel-antialiased;margin:0;color:#fff;display:none !important;font-family:arial;font-size:11px;line-height:0;')= preheader

@@ -1,0 +1,44 @@
+.numbers {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  .three-columns {
+    font-size:0;
+    padding-top: 22px;
+    text-align:left;
+    vertical-align:top;
+    
+    @media only screen and (max-width: 635px) {
+      text-align: center !important;
+    }
+
+    .column {
+      margin:0;
+      display:inline-block;
+      font-size:14px;
+      padding-top: 22px;
+      text-align:left;
+      vertical-align:top;
+      width:100%;
+      max-width:184px;
+
+      .number {
+        font-size: 46px;
+        font-weight: 300;
+        color: #272727;
+        font-family:'Open Sans', Arial, Helvetica, sans-serif;
+      }
+      .title {
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+        padding-bottom: 20px;
+        height: 60px;
+        vertical-align: top;
+        color: #272727;
+        font-family:'Open Sans', Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+}

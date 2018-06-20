@@ -1,0 +1,49 @@
+mixin numbers()
+    tr
+        td.numbers(style='width: 100%; padding-left: 24px; padding-right: 24px;')
+            <!--[if (gte mso 9)|(IE)]><table cellpadding='0' cellspacing='0' border='0' width='100%' style='width: 100%;'><tr><td><![endif]-->
+            .column(style='margin:0;display:inline-block;font-size:14px;width:100%;max-width:552px;text-align:center;vertical-align:top;width:100%;')
+                table(cellpadding="0" cellspacing="0" border="0" width='100%' style='width:100%;')
+                    tr
+                        td.three-columns
+                            each number in numbers
+                                .column.center
+                                    table(cellpadding="0" cellspacing="0" border="0" height="118" style='border-collapse:separate;width:100%;max-width:184px; min-width:150px;')
+                                        tr
+                                            if number.blocks === 'flat'
+                                                td(background="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/5cab199a-c546-4a64-a507-ac4be1d60375.png" style='background: url(https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/5cab199a-c546-4a64-a507-ac4be1d60375.png); background-repeat: no-repeat; background-size: 126px;')
+                                                    table(cellpadding="0" cellspacing="0" width="100%" style="width: 100%;")
+                                                        tr
+                                                            td.number= number.number
+                                                        tr
+                                                            td.title= number.title
+                                                        tr
+                                                            td
+                                                                img(src="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/65f7129f-85ae-4f4c-b888-2e95051e40ad.png" width='30' alt='')
+
+
+                                            else if number.blocks === 'home'
+                                                td(background="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/5ab464d6-ecab-495f-aef4-8569ac88e680.png" style='background-repeat: no-repeat; background-size: 126px;')
+                                                    table(cellpadding="0" cellspacing="0" width="100%" style="width: 100%;")
+                                                        tr
+                                                            td.number= number.number
+                                                        tr
+                                                            td.title= number.title
+                                                        tr
+                                                            td
+                                                                img(src="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/65f7129f-85ae-4f4c-b888-2e95051e40ad.png" width='30' alt='')
+
+
+                                            else
+                                                td(background="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/94d64aa7-c1f4-4746-b34c-ae721bd959f5.png" style='background-repeat: no-repeat; background-size: 126px;')
+                                                    table(cellpadding="0" cellspacing="0" width="100%" style="width: 100%;")
+                                                        tr
+                                                            td.number= number.number
+                                                        tr
+                                                            td.title= number.title
+                                                        tr
+                                                            td
+                                                                img(src="https://gallery.mailchimp.com/73ba57b18980bf0adbe74a91c/images/a0cff511-0a14-451f-aad8-a3ab551792e6.png" width='30' alt='')
+
+
+            <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
